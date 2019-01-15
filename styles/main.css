@@ -1,0 +1,270 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: #0263b0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0 0 23px;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.content {
+    width: 780px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+    background: #fff;
+}
+
+.header__content {
+    max-width: 1130px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav {
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    padding: 0;
+    margin: 2px 26px 0 0;
+}
+
+.nav__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 40px;
+    font-size: 15px;
+
+}
+
+.nav__link {
+    color: #9c9c9c;
+}
+
+.nav__link:hover {
+    color: #ec6446;
+}
+
+.nav__item:last-child {
+    margin-right: 0;
+}
+
+.logo {
+    font-size: 18px;
+    color: #0263b0;
+    font-weight: 500;
+}
+
+.logo:hover, .phone:hover, .nav__link:hover, .service__req__tel:hover {
+    text-decoration: none;
+}
+
+.orange {
+    color: #ec6446;
+}
+
+.grey {
+    color: #9c9c9c;
+}
+
+.phone {
+    font-size: 18px;
+    color: #000;
+}
+
+.first-scr {
+    padding: 30px 0 60px;
+    background-color: #e5eff7;
+    text-align: center;
+    position: relative;
+}
+
+.trust-text {
+    color: #9c9c9c;
+    font-size: 15px;
+}
+
+.title_firstScr {
+    width: 460px;
+    margin: 58px auto 32px;
+    position: relative;
+}
+
+.title_firstScr:before, .title_firstScr:after {
+    content: '';
+    display: block;
+    width: 359px;
+    height: 346px;
+    background: url("../images/orel.png") no-repeat;
+    position: absolute;
+    top: -80px;
+    right: -362px;
+}
+
+.title_firstScr:after {
+    left: -362px;
+    right: auto;
+}
+
+.plus {
+    width: 827px;
+    margin: 0 auto;
+}
+
+.plus__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+}
+
+.plus__img {
+    width: 100%;
+    height: 83px;
+    margin-bottom: 20px;
+    background: url("../images/icon-lupa.png") no-repeat center;
+}
+
+.plus__img_2 {
+    background-image: url("../images/icon-walet.png");
+}
+
+.plus__img_3 {
+    background-image: url("../images/icon-people.png");
+}
+
+.plus__text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.request {
+    background: #0263b0;
+    color: #fff;
+    padding: 27px 0 34px;
+}
+
+.request__content {
+    width: 780px;
+    margin: 0 auto;
+}
+
+.request__title {
+    font-size: 20px;
+    margin: 0 0 27px;
+    font-weight: 400;
+}
+
+.field {
+    display: inline-block;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 280px;
+    height: 50px;
+    margin-right: 12px;
+}
+
+.field:focus, .button:focus {
+    outline: none;
+}
+
+.button {
+    background: transparent;
+    border: 2px solid #fff;
+    text-align: center;
+    height: 50px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 30px;
+    min-width: 185px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ec6446;
+    border-color: #ec6446;
+}
+
+.second-scr {
+    padding: 85px 0;
+}
+
+.service {
+    margin: 85px 0 0;
+    list-style: none;
+}
+
+.service__item {
+    border-top: 1px solid #e5e5e5;
+}
+
+.service__name {
+    padding: 25px 0;
+}
+
+.service__text {
+    padding: 25px;
+    background: #f2f2f2;
+}
+
+.service__req {
+    background: #0263b0;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.service__req__tel {
+    font-weight: 700;
+    color: #9fc3df;
+}
+
+.fifth-scr__right {
+    background: #0263b0;
+    color: #fff;
+}
+
+

@@ -10,47 +10,51 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 </head>
 <body>
     <header class="header">
-        <a href="/" class="logo">Налоговый <span class="orange">консультант</span></a>
-        <ul class="nav">
-            <li class="nav__item"><a href="" class="nav__link">Наши услуги</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Эксперт</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Стоимость услуги</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Оставить заявку</a></li>
-        </ul>
-        <a href="tel:80000000000" class="phone"><span class="grey">+7 (343)</span> 234-56-78</a>
+        <div class="header__content">
+            <a href="/" class="logo fl">Налоговый <span class="orange">Консультант</span></a>
+            <ul class="nav">
+                <li class="nav__item"><a href="" class="nav__link">Наши услуги</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Эксперт</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Стоимость услуги</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Оставить заявку</a></li>
+            </ul>
+            <a href="tel:80000000000" class="phone fr"><span class="grey">+7 ( 343 )</span> 234 - 56 - 78</a>
+            <div class="clearfix"></div>
+        </div>
     </header>
     <div class="first-scr">
         <div class="content">
             <div class="trust-text">Больше 20 лет опыта с налоговыми проверками</div>
-            <h1 class="title">Решаем налоговые споры в вашу пользу</h1>
+            <h1 class="title title_firstScr">Решаем налоговые споры в&nbsp;вашу пользу</h1>
             <div class="plus">
                 <div class="plus__item">
-                    <div class="plus__img"></div>
-                    <div class="plus__text">Бесплатная оценка услуги по вашей ситуации</div>
+                    <div class="plus__img plus__img_1"></div>
+                    <div class="plus__text">Бесплатная оценка услуги по&nbsp;вашей ситуации</div>
                 </div>
                 <div class="plus__item">
-                    <div class="plus__img"></div>
-                    <div class="plus__text">Постоплата услуг при
-                        положительном результате</div>
+                    <div class="plus__img plus__img_2"></div>
+                    <div class="plus__text">Постоплата услуг при положительном результате</div>
                 </div>
                 <div class="plus__item">
-                    <div class="plus__img"></div>
-                    <div class="plus__text">Работаем с юридическими
-                        и физическими лицами</div>
+                    <div class="plus__img plus__img_3"></div>
+                    <div class="plus__text">Работаем с&nbsp;юридическими
+                        и&nbsp;физическими лицами</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="request" id="request">
-        <div class="content">
+        <div class="request__content">
+            <h2 class="request__title">Закажите бесплатную консультацию</h2>
             <form action="">
-                <input type="name" placeholder="Как вас зовут?">
-                <input type="text" placeholder="Ваш телефон">
-                <button  class="button">Отправить</button>
+                <input type="name" placeholder="Как Вас зовут?" class="field">
+                <input type="text" placeholder="Ваш телефон" class="field">
+                <input type="submit"  class="button" value="Отправить">
             </form>
         </div>
     </div>
@@ -63,10 +67,12 @@
                         <span class="service__ind"></span><span class="service__title">Консультации по налоговому учету</span><span class="service__arr"></span>
                     </div>
                     <div class="service__text">
-                        Постоянное изменение законодательства, неоднозначная трактовка налоговыми органами,
-                        судами и налогоплательщиками значительного количества норм, пробелы в налоговом
-                        регулировании при одновременном стремлении владельцев бизнеса к уменьшению
-                        своих налоговых обязательств могут явиться причиной нарушения ими налогового законодательства.
+                        <p>
+                            Постоянное изменение законодательства, неоднозначная трактовка налоговыми органами,
+                            судами и налогоплательщиками значительного количества норм, пробелы в налоговом
+                            регулировании при одновременном стремлении владельцев бизнеса к уменьшению
+                            своих налоговых обязательств могут явиться причиной нарушения ими налогового законодательства.
+                        </p>
                     </div>
                     <div class="service__req">
                         <a href="request" class="orange">Оставьте заявку</a> на услугу или позвоните по телефону <a href="tel:80000000000" class="service__req__tel">234-56-78</a>
@@ -165,10 +171,10 @@
                     Опишите свою ситуацию, мы&nbsp;пришлем ответ с&nbsp;примерной оценкой на&nbsp;почту
                 </p>
                 <form action="">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                    <input type="name">
-                    <input type="email">
-                    <button class="button">Заказать бесплатную консультацию</button>
+                    <textarea name="" id="" cols="30" rows="10" class="field"></textarea>
+                    <input type="name" class="field">
+                    <input type="email" class="field">
+                    <input type="submit"  class="button" value="Заказать бесплатную консультацию">
                 </form>
             </div>
         </div>
@@ -179,7 +185,7 @@
             <div class="trust-text">Больше 20 лет опыта с налоговыми проверками</div>
         </div>
         <div class="footer__item">
-            <a href="tel:80000000000" class="phone"><span class="grey">+7 (343)</span> 234-56-78</a>
+            <a href="tel:80000000000" class="phone"><span class="grey">+7 ( 343 )</span> 234 - 56 - 78</a>
             <p>с 10.00 до 20.00 <span class="orange"> Без выходных</span></p>
         </div>
         <div class="footer__item">
