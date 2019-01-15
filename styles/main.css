@@ -25,7 +25,7 @@ a:hover {
 p {
     font-size: 16px;
     line-height: 26px;
-    margin: 0 0 23px;
+    margin: 0 0 15px;
 }
 
 .clearfix:after {
@@ -46,6 +46,7 @@ p {
     line-height: 48px;
     text-align: center;
     margin: 0;
+    color: #231f20;
 }
 
 .header {
@@ -229,25 +230,36 @@ p {
 }
 
 .second-scr {
-    padding: 85px 0;
+    padding: 80px 0;
 }
 
 .service {
-    margin: 85px 0 0;
+    margin: 74px 0 0;
     list-style: none;
+    padding: 0;
 }
 
 .service__item {
     border-top: 1px solid #e5e5e5;
 }
 
+.service__item:last-child {
+    border-bottom: 1px solid #e5e5e5;
+}
+
 .service__name {
-    padding: 25px 0;
+    padding: 22px 0 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.service__body {
+    background: #f2f2f2;
+    display: none;
 }
 
 .service__text {
-    padding: 25px;
-    background: #f2f2f2;
+    padding: 22px 25px 15px;
 }
 
 .service__req {
@@ -267,4 +279,94 @@ p {
     color: #fff;
 }
 
+.service__ind {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #0263b0;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20px;
+}
 
+.service__arr {
+    display: inline-block;
+    width: 17px;
+    height: 10px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: url("../images/arr.png") no-repeat -0px -0px;
+}
+
+.service__item.active .service__arr {
+    background-position: -0px -10px;
+}
+
+.service__item.active .service__body {
+    display: block;
+}
+
+.service__title {
+    font-size: 18px;
+}
+
+.list {
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0 0 0 16px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.list li {
+    padding-left: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    list-style-image: url("../images/li.png");
+}
+
+.third-scr {
+    background: #edf4f9;
+}
+
+.title_firdScr {
+    width: 625px;
+    margin: 0 auto 68px;
+    padding: 115px 0 0;
+}
+
+.about {
+    float: right;
+    width: 432px;
+    min-height: 477px;
+    position: relative;
+}
+
+.about__name {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.about__description {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.about:before {
+    content: "";
+    background: url("../images/Tatiyana.png") no-repeat;
+    width: 898px;
+    height: 510px;
+    position: absolute;
+    left: -640px;
+    bottom: 0;
+}
+
+.fourth-scr {
+    padding: 90px 0;
+}
+
+.fifth-scr {
+    background: #edf4f9;
+}
