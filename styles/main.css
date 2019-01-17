@@ -28,6 +28,14 @@ p {
     margin: 0 0 15px;
 }
 
+.hd {
+    display: none;
+}
+
+.hm {
+    display: block;
+}
+
 .clearfix:after {
     content: '';
     display: block;
@@ -50,6 +58,7 @@ p {
 }
 
 .header {
+    display: block;
     width: 100%;
     position: relative;
     padding: 10px 0;
@@ -57,6 +66,11 @@ p {
     box-shadow: 0px 0px 15px 1px rgba(229,239,247,0.8);
     z-index: 10;
 }
+
+.header-mobile {
+    display: none;
+}
+
 .header_fix {
     position: fixed;
     top: 0;
@@ -527,4 +541,92 @@ p {
 .footer__link {
     display: block;
     margin: 7px 0 5px;
+}
+
+@media (max-width: 1000px) {
+    .hm, .header, .title_firstScr:before, .title_firstScr:after {
+        display: none;
+    }
+
+    .hd {
+        display: block;
+    }
+
+
+    .header-mobile {
+        display: block;
+        background: #e5eff7;
+        text-align: center;
+        padding: 18px 0;
+    }
+
+    .logo_mobile {
+        font-size: 17px;
+    }
+
+    .content, .request__content, .algorithm {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .title_firstScr, .title_firdScr, .plus {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 29px;
+        line-height: 36px;
+    }
+
+    .title_block {
+        display: block;
+        text-align: center;
+    }
+
+    .hamburger {
+        position: fixed;
+        z-index: 30;
+        top: 6px;
+        left: 7px;
+        padding: 10px;
+        background-color: rgba(229,239,247,0.8);
+        cursor: pointer;
+    }
+
+    .hamburger-line {
+        background-color: #0263b0;
+        width: 30px;
+        height: 3px;
+        margin-bottom: 7px;
+    }
+
+    .hamburger-line:last-child {
+        margin-bottom: 0;
+    }
+
+    .phone-logo {
+        position: fixed;
+        z-index: 50;
+        top: 6px;
+        right: 7px;
+        width: 50px;
+        height: 43px;
+        background-color: rgba(229,239,247,0.8);
+        background-image: url("../images/icon-phone.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        cursor: pointer;
+        font-size: 0;
+        color: transparent;
+    }
+
+    .title_firstScr {
+        margin: 4px auto 42px;
+    }
+
+    .plus__item {
+        display: block;
+        width: 100%;
+    }
+
 }
