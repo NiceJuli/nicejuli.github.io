@@ -13,15 +13,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 </head>
-<body>
-    <header class="header">
+<body id="Top">
+    <header class="header" id="topmenu">
         <div class="header__content">
-            <a href="/" class="logo fl">Налоговый <span class="orange">Консультант</span></a>
+            <a href="#Top" class="logo fl anchor">Налоговый <span class="orange">Консультант</span></a>
             <ul class="nav">
-                <li class="nav__item"><a href="" class="nav__link">Наши услуги</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Эксперт</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Стоимость услуги</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Оставить заявку</a></li>
+                <li class="nav__item"><a href="#Service" class="nav__link anchor">Наши услуги</a></li>
+                <li class="nav__item"><a href="#Expert" class="nav__link anchor">Эксперт</a></li>
+                <li class="nav__item"><a href="#Price" class="nav__link anchor">Стоимость услуги</a></li>
+                <li class="nav__item"><a href="#Request" class="nav__link anchor">Оставить заявку</a></li>
             </ul>
             <a href="tel:80000000000" class="phone fr"><span class="grey">+7 ( 343 )</span> 234 - 56 - 78</a>
             <div class="clearfix"></div>
@@ -48,22 +48,22 @@
             </div>
         </div>
     </div>
-    <div class="request" id="request">
+    <div class="request" id="Request">
         <div class="request__content">
             <h2 class="request__title">Закажите бесплатную консультацию</h2>
             <form action="">
-                <input type="name" placeholder="Как Вас зовут?" class="field">
-                <input type="text" placeholder="Ваш телефон" class="field">
+                <input type="name" name="name" placeholder="Как Вас зовут?" class="field">
+                <input type="text" name="phone" placeholder="Ваш телефон" class="field" id="requestPhone">
                 <input type="submit"  class="button" value="Отправить">
             </form>
         </div>
     </div>
-    <div class="second-scr">
+    <div class="second-scr" id="Service">
         <div class="content">
             <h2 class="title">В чём мы можем помочь</h2>
             <ul class="service">
-                <li class="service__item active">
-                    <div class="service__name">
+                <li class="service__item" id="serviceFirst">
+                    <div class="service__name" data-name="serviceFirst">
                         <span class="service__ind"></span><span class="service__title">Консультации по налоговому учету</span><span class="service__arr"></span>
                     </div>
                     <div class="service__body">
@@ -130,7 +130,7 @@
             </ul>
         </div>
     </div>
-    <div class="third-scr">
+    <div class="third-scr" id="Expert">
         <div class="content">
             <h2 class="title title_firdScr">С вами будет работать наш эксперт по налогам</h2>
             <div class="about">
@@ -164,7 +164,7 @@
             </div>
         </div>
     </div>
-    <div class="fifth-scr">
+    <div class="fifth-scr" id="Price">
         <div class="content">
             <div class="fifth-scr__left fl">
                 <h1 class="title title_fifthScr">Сколько стоят наши услуги?</h1>
@@ -182,8 +182,8 @@
                 </p>
                 <form action="" class="fifth-scr__form">
                     <textarea class="field field_textarea" placeholder="Опишите ситуацию"></textarea>
-                    <input type="name" class="field" placeholder="Как вас зовут?">
-                    <input type="email" class="field" placeholder="Ваша почта">
+                    <input type="name" name="name" class="field" placeholder="Как вас зовут?">
+                    <input type="email" name="email" class="field" placeholder="Ваша почта">
                     <input type="submit"  class="button button_form" value="Заказать бесплатную консультацию">
                 </form>
             </div>
@@ -191,19 +191,23 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="footer__item">
-            <a href="/" class="logo logo_footer">Налоговый <span class="orange">консультант</span></a>
-            <div class="trust-text">Больше 20 лет опыта с налоговыми проверками</div>
-        </div>
-        <div class="footer__item">
-            <a href="tel:80000000000" class="phone"><span class="grey">+7 ( 343 )</span> 234 - 56 - 78</a>
-            <p>с 10.00 до 20.00 <span class="orange"> Без выходных</span></p>
-        </div>
-        <div class="footer__item">
-            <p><a href="#" class="logo logo_footer">Политика конфиденциальности</a></p>
-            <p>&copy;&nbsp;Налоговый консультант, 2019</p>
+        <div class="footer__content">
+            <div class="footer__item">
+                <a href="#Top" class="logo logo_footer anchor">Налоговый <span class="orange">консультант</span></a>
+                <div class="trust-text">Больше 20 лет опыта с налоговыми проверками</div>
+            </div>
+            <div class="footer__item footer__item_center">
+                <a href="tel:80000000000" class="phone phone_footer"><span class="grey">+7 ( 343 )</span> 234 - 56 - 78</a>
+                <div>с 10.00 до 20.00 <span class="orange"> Без выходных</span></div>
+            </div>
+            <div class="footer__item footer__item_last">
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                <div>&copy;&nbsp;Налоговый консультант, 2019</div>
+            </div>
         </div>
     </footer>
-<script src="scripts/main.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.maskedinput.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
