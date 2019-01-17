@@ -157,46 +157,24 @@ $(document).ready(function () {
     });
 
     $('.formSubmit').submit(function () {
-        var order = $(this).find('input[name="order"]').val();
         var name = $(this).find('input[name="name"]').val();
         var phone = $(this).find('input[name="phone"]').val();
         var index = phone.indexOf('_');
         var indexstring = phone.indexOf('е');
-        var email = $(this).find('input[name="email"]').val();
-        var formName = $(this).find('input[name="hidden"]').val();
-        var comment1 = $(this).find('textarea[name="comment"]').val();
-        var comment2 = $(this).find('input[name="comment"]').val();
-        var certificate = $(this).find('select[name="certificate"]').find(':selected').html();
         if (phone.length >= 6 && index == -1 && emailCount == 0 && indexstring == -1) {
+            console.log(name, phone);
+            /*
             $.ajax({
                 type: "POST",
                 url: "/phpmailer/mail.php",
                 data: {
                     "name": name,
-                    "phone": phone,
-                    "email": email,
-                    "comment1": comment1,
-                    "comment2": comment2,
-                    "certificate": certificate,
-                    "formName": formName
+                    "phone": phone
                 },
                 success: function () {
-                    /*  clear_form();
-                     $('.modal').fadeOut();
-                     if (order == 1) {
-                     opening($('#modalThanksOrder'));
-                     }
-                     else if (order == 'cert') {
-                     opening($('#modalThanksLetter'));
-                     }
-                     else {
-                     opening($('#modalThanks'));
-                     }
-                     $('input[name="name"], input[name="phone"]').removeClass('error');*/
-                    yaCounter33205628.reachGoal("order");
                     window.location.href = '/thanks2';
                 }
-            });
+            }); */
         }
         else {
             $(this).find('input[name="phone"]').addClass('error');
