@@ -89,6 +89,10 @@ p {
     color: #9c9c9c;
 }
 
+.nav__item.active .nav__link{
+    color: #ec6446;
+}
+
 .nav__link:hover {
     color: #ec6446;
 }
