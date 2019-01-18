@@ -544,7 +544,7 @@ p {
 }
 
 @media (max-width: 1000px) {
-    .hm, .header, .title_firstScr:before, .title_firstScr:after {
+    .hm, .header {
         display: none;
     }
 
@@ -569,7 +569,16 @@ p {
         margin: 0 auto;
     }
 
-    .title_firstScr, .title_firdScr, .plus {
+    .content_mb100 {
+        overflow-x: hidden;
+    }
+
+    .title_firstScr {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .title_firdScr, .plus, .content_mb100 {
         width: 100%;
     }
 
@@ -636,6 +645,22 @@ p {
 
     .first-scr {
         padding-top: 0;
+    }
+
+
+    .title_firstScr:before, .title_firstScr:after {
+        width: 211px;
+        height: 203px;
+        top: 56px;
+        background-size: contain;
+    }
+
+    .title_firstScr:before {
+        right: -122px;
+    }
+
+    .title_firstScr:after {
+        left: -122px;
     }
 
 }
