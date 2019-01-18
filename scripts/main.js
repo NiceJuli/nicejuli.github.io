@@ -208,7 +208,6 @@ $(document).ready(function () {
     });
 
     $('.service__name').click(function (event) {
-        $(".service__body").hide();
         $(this).toggleClass("active");
         var parent = $(this).parent(".service__item");
         parent.children(".service__body").slideToggle();
