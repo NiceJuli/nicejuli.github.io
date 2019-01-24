@@ -909,13 +909,15 @@ p {
     }
 
     .menu-mobile {
-        display: none;
+        display: block;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         bottom: 0;
         right: 0;
+        width: 100%;
         z-index: 1000;
+        transition: .2s;
     }
 
     .menu-mobile__content {
@@ -933,7 +935,7 @@ p {
     }
 
     .menu-mobile_opened {
-        display: block;
+        left: 0;
     }
 
     .nav.nav_mobile {
