@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    position: relative;
 }
 
 a {
@@ -598,23 +599,63 @@ p {
 
     .hamburger {
         position: fixed;
-        z-index: 30;
+        z-index: 10001;
         top: 6px;
         left: 7px;
-        padding: 10px;
         background-color: rgba(229,239,247,0.8);
         cursor: pointer;
+        width: 50px;
+        height: 43px;
+    }
+
+    .hamburger-line, .hamburger:before, .hamburger:after {
+        background-color: #0263b0;
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        left: 10px;
+        -webkit-transition: .2s;
+        transition: .2s;
     }
 
     .hamburger-line {
-        background-color: #0263b0;
-        width: 30px;
-        height: 3px;
-        margin-bottom: 7px;
+        top: 50%;
+        margin-top: -1.5px;
+    }
+
+    .hamburger:before, .hamburger:after {
+        content: '';
+    }
+
+    .hamburger:before {
+        top: 10px;
+    }
+
+    .hamburger:after {
+        bottom: 10px;
     }
 
     .hamburger-line:last-child {
         margin-bottom: 0;
+    }
+
+    .hamburger_opened .hamburger-line {
+        opacity: 0;
+    }
+
+    .hamburger_opened:before {
+        top: 50%;
+        margin-top: -1.5px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .hamburger_opened:after {
+        bottom: auto;
+        top: 50%;
+        margin-top: -1.5px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
 
     .phone-logo {
@@ -865,6 +906,52 @@ p {
 
     .footer__item:last-child {
         margin-bottom: 0;
+    }
+
+    .menu-mobile {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .menu-mobile__content {
+        height: 100%;
+        width: 60%;
+        max-width: 300px;
+        background: #fff;
+        padding: 80px 20px;
+        z-index: 1000;
+        box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.3);
+    }
+
+    .hamburger_opened {
+       background: none;
+    }
+
+    .menu-mobile_opened {
+        display: block;
+    }
+
+    .nav.nav_mobile {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .menu-mobile .nav__item {
+        font-size: 18px;
+        display: block;
+        margin: 0;
+    }
+
+    .menu-mobile .nav__link {
+        color: #231f20;
+        padding: 15px 0;
+        display: block;
     }
 
 }

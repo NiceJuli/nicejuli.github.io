@@ -102,9 +102,9 @@ $(document).ready(function () {
 
 // hamburger
 
-    $('.hamburger, .drop-down').click(function(e){
-        $('.hamburger').toggleClass('round');
-        $('.drop-down').toggleClass('down');
+    $('.hamburger, .menu-mobile').click(function(e){
+        $('.hamburger').toggleClass('hamburger_opened');
+        $('.menu-mobile').toggleClass('menu-mobile_opened');
     });
     
     function clear_form() {
