@@ -758,7 +758,7 @@ p {
         margin-bottom: 9px;
     }
 
-    .form {
+    .form, .fifth-scr__form {
         max-width: 320px;
         margin: 0 auto;
     }
@@ -881,15 +881,19 @@ p {
     }
 
     .fifth-scr__left {
-        padding: 0;
-        margin-bottom: 40px;
-    }
-
-    .fifth-scr .content {
         padding: 0 25px;
         width: 100%;
         box-sizing: border-box;
         max-width: 500px;
+        margin: 0 auto 40px;
+    }
+
+    .fifth-scr__right {
+        border-radius: 0;
+    }
+
+    .fifth-scr .content {
+        width: 100%;
     }
 
     .attention {
