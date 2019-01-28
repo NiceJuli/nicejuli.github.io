@@ -960,4 +960,9 @@ p {
         display: block;
     }
 
+    .button:hover {
+        background: transparent;
+        border-color: #fff;
+    }
+
 }
