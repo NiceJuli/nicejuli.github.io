@@ -111,36 +111,8 @@ $(document).ready(function () {
         $("input[type='text'], input[type='tel']").val("");
         $("textarea").val("");
     }
+
     Site.clearForm = clear_form;
-
-    var emailCount = 0;
-
-    function email_validate(x) {
-        var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-        if (pattern.test(x.val())) {
-            x.removeClass('error');
-            emailCount = 0;
-        }
-        else if (x.val() == 0) {
-            x.removeClass('error');
-            emailCount = 0;
-        }
-        else {
-            x.addClass('error');
-            emailCount = 1;
-        }
-        console.log(emailCount);
-    };
-
-    $('input[name="email"]').blur(function () {
-        email_validate($(this));
-    });
-
-    $('input[name="email"]').keypress(function (e) {
-        if (e.keyCode == 13) {
-            email_validate($(this));
-        }
-    });
 
     $('input[name="phone"]').blur(function () {
         var phone = $(this).val();
@@ -159,17 +131,20 @@ $(document).ready(function () {
     $('.formSubmit').submit(function () {
         var name = $(this).find('input[name="name"]').val();
         var phone = $(this).find('input[name="phone"]').val();
+        var question = $(this).find('textarea').val();
         var index = phone.indexOf('_');
         var indexstring = phone.indexOf('е');
-        if (phone.length >= 6 && index == -1 && emailCount == 0 && indexstring == -1) {
-            console.log(name, phone);
+        if (phone.length >= 6 && index == -1 && indexstring == -1) {
+            console.log(name, phone, question);
+            clear_form();
             /*
             $.ajax({
                 type: "POST",
                 url: "/phpmailer/mail.php",
                 data: {
                     "name": name,
-                    "phone": phone
+                    "phone": phone,
+                    "question": question
                 },
                 success: function () {
                     window.location.href = '/thanks2';
@@ -202,7 +177,7 @@ $(document).ready(function () {
     }
 
 
-    $('#requestPhone').keyup(function () {
+    $('input[name="phone"]').keyup(function () {
         var $this = $(this);
         validatePhone($this)
     });

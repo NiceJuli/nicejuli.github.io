@@ -101,7 +101,7 @@ p {
 }
 
 .nav__link {
-    color: #9c9c9c;
+    color: #231f20;
 }
 
 .nav__item.active .nav__link{
@@ -148,7 +148,7 @@ p {
 
 .trust-text {
     color: #9c9c9c;
-    font-size: 15px;
+    margin-bottom: 50px;
 }
 
 .title_firstScr {
@@ -230,11 +230,11 @@ p {
     width: 279px;
     height: 50px;
     margin-right: 12px;
-    border: 2px solid #fff;
+    border: none;
 }
 
 .field.error {
-    border-color: #ed3c15;
+    background-color: lightpink;
 }
 
 .field:focus, .button:focus {
@@ -315,7 +315,7 @@ p {
 
 .service__ind {
     position: absolute;
-    top: 28px;
+    top: 31px;
     left: 0;
     width: 8px;
     height: 8px;
@@ -328,7 +328,7 @@ p {
     width: 17px;
     height: 10px;
     position: absolute;
-    top: 30px;
+    top: 33px;
     right: 0;
     background: url("../images/arr.png") no-repeat -0px -0px;
 }
@@ -339,6 +339,7 @@ p {
 
 .service__title {
     font-size: 18px;
+    line-height: 28px;
 }
 
 .list {
@@ -369,7 +370,7 @@ p {
 .about {
     float: right;
     width: 432px;
-    min-height: 477px;
+    min-height: 420px;
     position: relative;
 }
 
@@ -387,7 +388,7 @@ p {
     content: "";
     background: url("../images/Tatiyana.png") no-repeat;
     width: 898px;
-    height: 510px;
+    height: 458px;
     position: absolute;
     left: -640px;
     bottom: 0;
@@ -530,6 +531,10 @@ p {
 
 .footer__item_last {
     text-align: right;
+}
+
+.footer .trust-text {
+    color: #231f20;
 }
 
 .logo_footer {
@@ -926,7 +931,6 @@ p {
         max-width: 300px;
         background: #fff;
         padding: 80px 20px;
-        z-index: 1000;
         box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.3);
     }
 
