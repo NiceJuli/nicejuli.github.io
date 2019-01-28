@@ -255,7 +255,7 @@ p {
 }
 
 .button:hover {
-    background-color: #ec6446;
+    background: #ec6446;
     border-color: #ec6446;
 }
 

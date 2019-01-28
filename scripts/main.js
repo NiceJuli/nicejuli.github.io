@@ -40,6 +40,7 @@ $(document).ready(function () {
         topMenu = $("#top-menu"),
         topMenuHeight = topMenu.outerHeight() + 40,
         menuItems = topMenu.find("a"),
+        scrollTop,
         scrollItems = menuItems.map(function () {
             var item = $(parseUrl($(this).attr("href")).hash);
             if (item.length) {
@@ -95,6 +96,11 @@ $(document).ready(function () {
                 anchorElement = $(anchor);
             if (anchorElement.length) {
                 e.preventDefault();
+                if (screen.width < 1001) {
+                    topMenuHeight = 0;
+                } else {
+                    topMenuHeight = topMenu.outerHeight() + 40
+                }
                 $('html,body').stop().animate({scrollTop: anchorElement.offset().top - topMenuHeight + 1}, 'slow');
             }
         });
