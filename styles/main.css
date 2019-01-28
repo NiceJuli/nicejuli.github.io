@@ -677,11 +677,11 @@ p {
     }
 
     .phone-logo_icon {
-        width: 21px;
-        height: 21px;
+        width: 25px;
+        height: 25px;
         background: url("../images/icon-phone.png");
         display: inline-block;
-        margin-top: 11px;
+        margin-top: 10px;
     }
 
     .title_firstScr {
