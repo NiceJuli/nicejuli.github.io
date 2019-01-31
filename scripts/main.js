@@ -143,7 +143,6 @@ $(document).ready(function () {
         if (phone.length >= 6 && index == -1 && indexstring == -1) {
             console.log(name, phone, question);
             clear_form();
-            /*
             $.ajax({
                 type: "POST",
                 url: "/phpmailer/mail.php",
@@ -153,12 +152,13 @@ $(document).ready(function () {
                     "question": question
                 },
                 success: function () {
-                    window.location.href = '/thanks2';
+                    window.location.href = '/thanks';
                 }
-            }); */
+            });
         }
         else {
             $(this).find('input[name="phone"]').addClass('error');
+
         }
         return false;
     });
