@@ -1,7 +1,9 @@
 <?php
 if(isset($_POST['name'])){
-    $to = "podosyan.webpartner@gmail.com";
+    $to1 = "taniaelizarowa@yandex.ru";
+    $to2 = "ielizarov@yandex.ru";
     $subject = "Заявка с сайта Налоги";
+
 
     $message = "<html><head><title>Заявка с сайта Налоги</title></head><body>";
     if(isset($_POST['question'])){
@@ -14,14 +16,12 @@ if(isset($_POST['name'])){
         $message.= '<p><b>Телефон: </b> '.$_POST['phone'].'</p>';
     }
     $message.= "</body></html>";
-
 // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-// More headers
-    $headers .= 'From: <podosyan.webpartner@gmail.com>';
 
-    mail($to,$subject,$message,$headers);
+    mail($to1,$subject,$message,$headers);
+    mail($to2,$subject,$message,$headers);
 }
 return true;
