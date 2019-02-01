@@ -19,7 +19,8 @@ if(isset($_POST['name'])){
 // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: Налоги' . "\r\n";
+    $headers .= 'FromName: Налоги' . "\r\n";
+    $headers .= 'From: Налоги<pnalog@ya.ru>' . "\r\n";
 
 
     mail($to1,$subject,$message,$headers);
