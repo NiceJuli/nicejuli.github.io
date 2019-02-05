@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['name'])){
-    $to1 = "taniaelizarowa@yandex.ru";
+    $to1 = "pnalogi@yandex.ru";
     $to2 = "ielizarov@yandex.ru";
     $subject = "Заявка с сайта Налоги";
 
@@ -20,7 +20,7 @@ if(isset($_POST['name'])){
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $headers .= 'FromName: Налоги' . "\r\n";
-    $headers .= 'From: Налоги<pnalog@ya.ru>' . "\r\n";
+    $headers .= 'From: Налоги<pnalogi@ya.ru>' . "\r\n";
 
 
     mail($to1,$subject,$message,$headers);

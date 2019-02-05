@@ -40,7 +40,6 @@ $(document).ready(function () {
         topMenu = $("#top-menu"),
         topMenuHeight = topMenu.outerHeight() + 40,
         menuItems = topMenu.find("a"),
-        scrollTop,
         scrollItems = menuItems.map(function () {
             var item = $(parseUrl($(this).attr("href")).hash);
             if (item.length) {
