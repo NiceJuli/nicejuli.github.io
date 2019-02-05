@@ -87,6 +87,22 @@ $(document).ready(function () {
             }
     });
 
+
+    function containerHeight() {
+        var conteinerHeight = $(window).outerHeight() - $('.header').outerHeight() - $('.footer').outerHeight() -2;
+        $('.container').css('min-height', conteinerHeight);
+    }
+
+    containerHeight();
+
+    if (window.location.href != 'http://pnalogi.ru/') {
+        $(window).resize(function() {
+            containerHeight();
+        })
+    }
+
+
+
 //anchors menu
 
     $(function () {
@@ -133,33 +149,53 @@ $(document).ready(function () {
         }
     });
 
-    $('.formSubmit').submit(function () {
-        var name = $(this).find('input[name="name"]').val();
-        var phone = $(this).find('input[name="phone"]').val();
-        var question = $(this).find('textarea').val();
-        var index = phone.indexOf('_');
-        var indexstring = phone.indexOf('е');
-        if (phone.length >= 6 && index == -1 && indexstring == -1) {
-            console.log(name, phone, question);
-            clear_form();
-            $.ajax({
-                type: "POST",
-                url: "/phpmailer/mail.php",
-                data: {
-                    "name": name,
-                    "phone": phone,
-                    "question": question
-                },
-                success: function () {
-                    window.location.href = '/thanks';
-                }
-            });
+    $('#formFirst').click(function () {
+        if ( $(this).prop("checked")) {
+            $('#btnSubmitFirst').removeClass('button_disabled')
+        } else {
+            $('#btnSubmitFirst').addClass('button_disabled');
         }
-        else {
-            $(this).find('input[name="phone"]').addClass('error');
+    })
 
+    $('#formSecond').click(function () {
+        if ( $(this).prop("checked")) {
+            $('#btnSubmitSecond').removeClass('button_disabled')
+        } else {
+            $('#btnSubmitSecond').addClass('button_disabled');
         }
-        return false;
+    })
+
+    $('.formSubmit').submit(function () {
+        var checkbox  = $(this).find('input[type="checkbox"]');
+        if (checkbox.prop("checked")) {
+            var name = $(this).find('input[name="name"]').val();
+            var phone = $(this).find('input[name="phone"]').val();
+            var question = $(this).find('textarea').val();
+            var index = phone.indexOf('_');
+            var indexstring = phone.indexOf('е');
+            if (phone.length >= 6 && index == -1 && indexstring == -1) {
+                clear_form();
+                $.ajax({
+                    type: "POST",
+                    url: "/phpmailer/mail.php",
+                    data: {
+                        "name": name,
+                        "phone": phone,
+                        "question": question
+                    },
+                    success: function () {
+                        window.location.href = '/thanks';
+                    }
+                });
+            }
+            else {
+                $(this).find('input[name="phone"]').addClass('error');
+
+            }
+            return false;
+        } else {
+            return false;
+        }
     });
 
     function validatePhone(item) {

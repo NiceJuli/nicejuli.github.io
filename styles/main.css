@@ -259,6 +259,12 @@ p {
     border-color: #ec6446;
 }
 
+.button_disabled:hover {
+    background: transparent;
+    border-color: #fff;
+    cursor: default;
+}
+
 .second-scr {
     padding: 80px 0;
 }
@@ -558,9 +564,16 @@ p {
     text-align: left;
 }
 
-.privacy-scr {
+.bg_blue {
+    background: #e5eff7;
+}
+
+.privacy-scr, .thanks-scr {
     padding: 83px 0 105px;
-    background: #edf4f9;
+}
+
+.thanks-scr {
+    text-align: center;
 }
 
 .inserted-ol-list {
@@ -585,6 +598,72 @@ p {
 .item-inserted-ol-list {
     margin: 0;
     padding: 0;
+}
+
+.container {
+    min-height: 850px;
+}
+
+.content-text {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.thanks-scr .title {
+    margin-bottom: 30px;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 13px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: #fff;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid #ec6446;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 @media (max-width: 1000px) {
@@ -612,7 +691,7 @@ p {
         font-size: 17px;
     }
 
-    .request__content, .privacy-scr .content {
+    .request__content, .content-text {
         width: 85%;
         margin: 0 auto;
     }
