@@ -9,6 +9,7 @@ body, html {
 a {
     color: #0263b0;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
@@ -613,6 +614,12 @@ p {
     margin-bottom: 30px;
 }
 
+.agreement-text {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 13px 0 0;
+}
+
 .checkbox-container {
     display: block;
     position: relative;
@@ -664,6 +671,15 @@ p {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.orange-link {
+    text-decoration: underline;
+    color: #f2946d;
+}
+
+.orange-link:hover {
+    text-decoration: none;
 }
 
 @media (max-width: 1000px) {

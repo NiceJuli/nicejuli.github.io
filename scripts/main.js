@@ -149,53 +149,32 @@ $(document).ready(function () {
         }
     });
 
-    $('#formFirst').click(function () {
-        if ( $(this).prop("checked")) {
-            $('#btnSubmitFirst').removeClass('button_disabled')
-        } else {
-            $('#btnSubmitFirst').addClass('button_disabled');
-        }
-    })
-
-    $('#formSecond').click(function () {
-        if ( $(this).prop("checked")) {
-            $('#btnSubmitSecond').removeClass('button_disabled')
-        } else {
-            $('#btnSubmitSecond').addClass('button_disabled');
-        }
-    })
-
     $('.formSubmit').submit(function () {
-        var checkbox  = $(this).find('input[type="checkbox"]');
-        if (checkbox.prop("checked")) {
-            var name = $(this).find('input[name="name"]').val();
-            var phone = $(this).find('input[name="phone"]').val();
-            var question = $(this).find('textarea').val();
-            var index = phone.indexOf('_');
-            var indexstring = phone.indexOf('е');
-            if (phone.length >= 6 && index == -1 && indexstring == -1) {
-                clear_form();
-                $.ajax({
-                    type: "POST",
-                    url: "/phpmailer/mail.php",
-                    data: {
-                        "name": name,
-                        "phone": phone,
-                        "question": question
-                    },
-                    success: function () {
-                        window.location.href = '/thanks';
-                    }
-                });
-            }
-            else {
-                $(this).find('input[name="phone"]').addClass('error');
-
-            }
-            return false;
-        } else {
-            return false;
+        var name = $(this).find('input[name="name"]').val();
+        var phone = $(this).find('input[name="phone"]').val();
+        var question = $(this).find('textarea').val();
+        var index = phone.indexOf('_');
+        var indexstring = phone.indexOf('е');
+        if (phone.length >= 6 && index == -1 && indexstring == -1) {
+            clear_form();
+            $.ajax({
+                type: "POST",
+                url: "/phpmailer/mail.php",
+                data: {
+                    "name": name,
+                    "phone": phone,
+                    "question": question
+                },
+                success: function () {
+                    window.location.href = '/thanks';
+                }
+            });
         }
+        else {
+            $(this).find('input[name="phone"]').addClass('error');
+
+        }
+        return false;
     });
 
     function validatePhone(item) {
